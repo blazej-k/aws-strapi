@@ -14,10 +14,6 @@
     "title": {
       "type": "string",
       "required": true
-    },
-    "subtitle": {
-      "type": "string",
-      "required": false
     }
   }
 }
