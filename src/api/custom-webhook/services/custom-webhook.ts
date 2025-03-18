@@ -4,11 +4,9 @@
 
 export default () => ({
   overwriteWebhook: async () => {
-    await fetch(process.env.GITHUB_WEBHOOK_LINK, {
-      body: JSON.stringify({ event_type: "content-update" }),
+    await fetch(process.env.AWS_AMPLIFY_WEBOOK_URL, {
       headers: {
-        Authorization: `token ${process.env.GITHUB_TOKEN}`,
-        Accept: "application/vnd.github+json",
+        "Content-Type": "application/json",
       },
       method: "POST",
     });
